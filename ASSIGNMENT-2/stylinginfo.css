@@ -1,3 +1,335 @@
 body{
-    background-color: red;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #0073e6, #000509 65%);
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  height: 100vh; /* Set body height to 100% of viewport height */
+    font-family: garamond;
+   
+    
 }
+.welcome{
+  position:static;
+  height: 100%; width: 130%;
+ 
+  margin-left: -78px; 
+   height: 90px;
+}
+.light{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 87%;
+  height: 100%;
+  z-index: -1; /* This places the image behind other content */
+  opacity: 0.6; /* Adjust the opacity as needed */
+  transform: rotate(150deg); 
+}
+
+.bottomfire {
+  position: fixed;
+  bottom: -10px;
+  width:100%;
+  height: 180px; 
+  z-index: 1;
+}
+.container {
+  overflow: auto; /* Allow the container to scroll */
+  max-height: 100vh; /* Set the maximum height to the viewport height */
+}
+
+.flex1{
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  /*background-color:#fff;*/
+
+}
+.flex2{
+  
+  width: 100%;
+  overflow: hidden;
+  height: 600px;
+  /*background-color:#fff;*/
+
+}.flex3{
+  
+  width: 100%;
+  
+  height: 200px;
+  /*background-color:#fff;*/
+
+}
+.gifholder{
+  z-index: 3;
+  border-radius: 5px;
+  width:270px;
+  height:270px;
+  position: relative;
+  
+}
+/* Style the .flex4 container */
+.flex4 {
+  font-size: 24px;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+ 
+  height: 200px;
+  display: flex;
+  justify-content: flex-end; /* Align contact info to the left */
+  align-items: center;
+}
+
+/* Style the contact items */
+.contact-info {
+  margin-right: 20px; /* Add some spacing from the right edge */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px; /* Add spacing between contact items */
+}
+
+.contact-item i {
+  margin-left: 10px; /* Add spacing between the icon and text */
+  font-size: 20px; /* Adjust the icon size as needed */
+}
+
+
+
+
+
+.check{
+  height: 50px;
+  width: 200px;
+  position: relative;
+  top: 800px
+
+}
+.flex2 .organizer{
+  
+  display: grid;
+  grid-template-columns: 6.5fr 3.5fr;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  
+}
+.flex2 .organizer .item1{
+  border-color: #0073e6;
+   /* Adjust the width as needed */
+background: linear-gradient(to bottom, #0073e6, #000509); /* Gradient background from blue to lighter blue */
+border-top: 30px solid #0073e6; /* Wider top border in blue */
+border: 6px solid #000; /* Black border with a specified width */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+border-radius: 7px; /* Rounded corners */
+padding: 20px; /* Add padding to create space inside the border */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  height: 516px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 6px;
+  grid-row-start: 1;
+  grid-row-end:7;
+
+ 
+}
+.flex2 .organizer .item2{
+ 
+  grid-row-start: 1;
+  grid-row-end:4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; /* Adjust the padding as needed for space on each side */
+
+}
+.flex2 .organizer .item3{
+  
+  grid-row-start: 4;
+  grid-row-end:7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.video-container {
+  width: 450px;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio (height divided by width) */
+  border: 5px solid #b4b4b4; /* Metallic-like border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #292929; /* Metallic-like background color */
+}
+
+/* Style the .video-container iframe */
+.video-container iframe {
+  position: absolute;
+  top: 5px; /* Adjust top position to fit the border */
+  left: 5px; /* Adjust left position to fit the border */
+  right: 5px; /* Adjust right position to fit the border */
+  bottom: 5px; /* Adjust bottom position to fit the border */
+  width: calc(100% - 10px); /* Adjust width to fit the border */
+  height: calc(100% - 10px); /* Adjust height to fit the border */
+}
+.navbar {
+  background: linear-gradient(to right,rgba(0, 0, 0, 1) 30%,  rgba(72, 34, 34, 0) ); /* Black background color */
+  /*overflow: hidden; /* Clear floats */
+  height: 87px;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  
+  float: left; /* Float the links to the left */
+  display: block; /* Make the links block elements */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 14px 16px; /* Add padding to the links */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the navbar container */
+.navbar3 {
+  background-color:#c40404  ; /* Black background color */
+  display: flex;
+  height: 35px; /* Adjust the height as needed */
+  width: 100%; /* Set the width to 100% for a horizontal bar */
+  overflow: hidden;
+  position: relative; /* Position relative for absolute positioning of the text */
+}
+
+.scrolling-text
+ {
+    top: 0px;
+    font-size: 30px;
+    position: absolute; /* Position absolute for independent movement */
+    color: yellow;
+    white-space: nowrap; /* Prevent text from wrapping */
+    top: 0; /* Start at the top edge of the navbar */
+    bottom: 0;
+    animation-duration: 10s; /* Set the animation duration */
+}
+
+/* Keyframes animation for scrolling text */
+@keyframes scroll {
+    0% {
+        left: 100%; /* Start at the right edge */
+    }
+   100% {
+        left: -100%; /* Move to the left edge */
+    }
+}
+
+/* Apply the scrolling animation */
+.scrolling-text {
+    animation: scroll 25s linear infinite; /* Apply the scrolling animation */
+}
+
+
+
+
+
+.navbar2{
+  background-color: #000;
+  height: 35px;
+  display: flex;
+  font-family: "garamond";
+  overflow: hidden;
+  width: 100%;
+}
+
+.tab {
+  flex-grow: 1; /* Distribute tabs equally */
+  text-align: center;
+  line-height: 50px; /* Vertically center the text */
+  color: white;
+  cursor: pointer;
+}
+.tab:hover {
+  text-decoration: underline;
+  color: #1f57da; /* Change the color to red on hover */
+}
+.tab:active {
+  color: white;
+  font-weight: bold;
+}
+/* Style for the spacer to leave the last 30% empty */
+.spacer {
+  flex-grow: 3; /* Takes up 3 times the space of each tab */
+  background-color: transparent; /* Transparent background */
+}
+/* Style the error box container */
+
+/* Define a container for the retro Windows border */
+.windows-border {
+    border-color: #0073e6;
+    width: 100px; /* Adjust the width as needed */
+  background: linear-gradient(to bottom, #0073e6, #000509); /* Gradient background from blue to lighter blue */
+  border-top: 30px solid #0073e6; /* Wider top border in blue */
+  border: 6px solid #000; /* Black border with a specified width */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  border-radius: 7px; /* Rounded corners */
+  padding: 20px; /* Add padding to create space inside the border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  /* Style the content inside the border */
+  .content {
+    color: #fff; /* Set the text color to white */
+    /* Specify the font family */
+    text-align: center;
+  }
+  
+  /* Style the title */
+  .title {
+    font-size: 24px; /* Set the font size */
+    margin-bottom: 10px; /* Add margin to separate the title from the content */
+  }
+  
+  /* Style a button for a retro look */
+  .button {
+    background-color: #031222; /* Match the background color of the border */
+    color: #fff; /* Set the text color to white */
+    border: 2px solid #ffffff; /* Add a white border */
+    border-radius: 6px ;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-family: Arial, sans-serif; /* Specify the font family */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+  }
+  
+  .button:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #008080; /* Change text color on hover */
+  }
+  /* Style for the container holding the GIFs */
+.gif-container {
+  
+  float: right;
+  width:20%;
+  position: relative; /* Make it a positioned container */
+}
+
+/* Style for the GIFs */
+.gif {
+  
+  left: 100px;
+  position: absolute;
+  height: 290px;
+  
+  top: -50px;
+  left: 90px;
+  z-index: 1; 
+}
+
+
+
+  
