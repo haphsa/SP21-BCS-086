@@ -18,13 +18,13 @@ body{
      flex-direction: row;
    
 }
-.flex2 .stextbar {
+.stextbar {
     background-color: rgb(49, 190, 237);
     display: flex;
     height: 25px; 
     width: 100%; 
     overflow: hidden;
-    margin-top: -25px;
+    margin-top: -43px;
     position: absolute; 
   }
   .scrolling-text
@@ -106,6 +106,7 @@ body{
 }
 .flex1 .navigation .navigator a{
     text-decoration: none;
+    color: blue;
 }
 .flex1 .navigation .navigator:hover {
     background: url(assets/download.png) top ;
@@ -115,4 +116,46 @@ body{
     width: 100%;
 
 }
+.flex3 .navigation{
+  
+    position: absolute;
+    top: 472px; 
+    left: 150px;
+    padding: 10px;
 
+}
+.flex3 .navigation .navigator {
+    
+   overflow: hidden;
+    display: inline-block;
+    border-radius: 5px;
+    background: url(assets/bg_menu_item.png) top left no-repeat ;
+    font-weight: bolder;
+   font-size: 10px;
+    width: 90px;
+    height: 23px;
+    margin-right: 2px;
+    text-align: center;
+   padding: 3px;
+    color: blue;
+}
+.flex3 .navigation .navigator a{
+    text-decoration: none;
+    color: rgb(25, 25, 30);
+}
+.flex3 .navigation .navigator:hover {
+    background: url(assets/download.png) top ;
+  }
+  .flex3 .organizer{
+ background-color: azure;
+    display: grid;
+    
+    grid-template-columns:150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    
+  }
+  .flex3 .organizer .item{
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+  }
