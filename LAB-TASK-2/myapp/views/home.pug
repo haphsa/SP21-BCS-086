@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title landing page
+    link(href="/stylesheets/style.css", rel="stylesheet", type="text/css")
+
+  body
+ 
+    audio(id="backgroundMusic", loop, controls)
+      source(src="/images/sematary.mp3", type="audio/mpeg")
+    style.
+      #backgroundMusic {
+        position: fixed;
+        top: -100px;
+        left: -100px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+    script.
+      document.addEventListener('DOMContentLoaded', function () {
+        var audio = document.getElementById('backgroundMusic');
+        audio.play();
+      });
+    div
+      img(src="/images/bottomfire.gif", class="bottomfire")
+    div
+      img(src="/images/lightning-bolt-png-3.png", class="light")
+
+    div.container
+      div.flex1
+        div.navbar
+          div.gif-container
+            img(src="/images/skull.gif", alt="GIF 2", class="gif")
+          img(style="width: 300px; height: 130%;", src="/images/Krow8logo.gif")
+
+        div.navbar2
+          a(href="/", class="tab tab1") HOME
+          a(href="/services", class="tab tab2") SERVICES
+          a(href="/projects", class="tab tab3") PROJECTS
+          a(href="/products", class="tab tab3") PRODUCTS
+          a(href="/imagegallery", class="tab tab4") IMAGE GALLERY
+          a(href="/login", class="tab tab5") LOG OUT
+          div.spacer
+
+        div.navbar3
+          div.scrolling-text STREETWEAR&nbsp;&nbsp;&nbsp;HOODIES&nbsp;&nbsp;&nbsp;SWEATPANTS&nbsp;&nbsp;&nbsp;JEANS&nbsp;&nbsp;&nbsp;JACKETS&nbsp;&nbsp;&nbsp;TSHIRTS&nbsp;&nbsp;&nbsp;SKIRTS&nbsp;&nbsp;&nbsp;HATS&nbsp;&nbsp;&nbsp;BELTS&nbsp;&nbsp;&nbsp;FASHION
+
+      div.flex3(style="height: 100px;")
+        div
+          img(src="/images/ezgif-2-3adadb684a.gif", class="gifholder", style="z-index: 3;margin-left: 45px; margin-top: -33px; height: 220px;")
+
+        div(style="position: relative; margin-top: -150px;")
+          img(src="/images/newwelcome.png", class="welcome")
+
+        div(style="position: relative; margin-top: -180px;")
+          img(src="/images/newwelcome.png", class="welcome", style="margin-left:-290px;")
+
+      div.flex2
+        div.organizer
+          div.item1
+            h1(style="color: aliceblue;padding: 20px; padding-bottom:0px;") ABOUT US
+            p(style="color: aliceblue; padding: 20px; ")
+              | Nestled in the heart of Pakistan's textile industry, our clothing manufacturing company specializes in bringing your vision to life. We're not just about making clothes; we're about turning your creative ideas into reality. Whether it's custom streetwear, trendy graphic tees, or stylish urban wear, we're here to execute your unique fashion concepts. Our skilled team of craftsmen is dedicated to bringing your designs to fruition. Our manufacturing
+              a(href="#" class="tab") process
+              | is driven by a relentless pursuit of quality excellence. We're committed to eco-friendly and ethical practices, ensuring that your vision is realized responsibly. Quality assurance is at the core of our operations, with rigorous checks and standards implemented throughout the production journey. We prioritize consistency and precision to deliver products that meet the highest standards of durability and style.
+              | <br>In addition to our commitment to quality, we are equally dedicated to cost-effectiveness. Through efficient processes and resource management, we optimize production to offer competitive pricing without compromising on the superior quality that defines our brand. Our goal is to provide you with affordable, top-notch streetwear that exceeds expectations in both craftsmanship and value. Join us in transforming your fashion dreams into reality, where every piece reflects your creativity and style.
+
+          div.item2
+            div.video-container
+              iframe(width="560", height="315", src="https://www.youtube.com/embed/CJ-Q14KqSTc?si=OB9Fl3wf8ElzePQO", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowfullscreen)
+
+          div.item3
+            div.video-container
+              iframe(width="560", height="315", src="https://www.youtube.com/embed/WBa3qAYlMNo?si=zHt-q72FzXoRjTz2", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowfullscreen)
+
+      div.flex3
+        div
+          img(src="/images/ezgif-2-6f650a2bd2.gif", class="gifholder", style="margin-left: 22px; margin-top: -19px;")
+        div
+          img(src="/images/ezgif-2-f972999f98.gif", class="gifholder", style="margin-left: 222px; top:-120px;")
+
+      div.flex4
+        div.contact-info
+          div.contact-item
+            i(class="fas fa-envelope")
+            span Email: example@example.com
+          div.contact-item
+            i(class="fas fa-phone")
+            span Phone: +123 456 7890
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
