@@ -3,7 +3,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require("mongoose");
-var app = express(); // Move this line up to define the 'app' object before using it
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var app = express(); 
+
 
 app.set('view engine', 'pug');
 
@@ -15,13 +18,22 @@ app.use(cookieParser());
 
 
 
+app.use(session({ secret: 'your-secret-key', resave: true, saveUninitialized: true }));
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var calculatorRouter = require('./routes/calculatorRoutes'); 
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/calculator', calculatorRouter);
+
+
 
 
 

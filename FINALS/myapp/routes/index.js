@@ -63,8 +63,60 @@ router.get('/products', (req, res, next) => {
 router.get('/layout', (req, res, next) => {
   res.render('layout', { page: 'layout' });
 });
-router.get('/projects', (req, res, next) => {
-  res.render('projects', { page: 'projects' });
+router.get('/finals', (req, res, next) => {
+  res.render('finals', { page: 'finals' });
+});
+router.post("/calculator", async function (req, res, next) {
+  try {
+    const { operand1, operation, operand2 } = req.body;
+
+    let result;
+    switch (operation) {
+      case '+':
+        result = parseFloat(operand1) + parseFloat(operand2);
+        console.log(result);
+        break;
+      case '-':
+        result = parseFloat(operand1) - parseFloat(operand2);
+        console.log(result);
+        break;
+      case '*':
+        result = parseFloat(operand1) * parseFloat(operand2);
+        console.log(result);
+        break;
+      case '/':
+        result = parseFloat(operand1) / parseFloat(operand2);
+        console.log(result);
+        break;
+      default:
+        result = 'Invalid operation';
+    }
+
+    // Store data in session
+    if (!req.session.calculations) {
+      req.session.calculations = [];
+    }
+
+    req.session.calculations.push({
+      operand1: parseFloat(operand1),
+      operation,
+      operand2: parseFloat(operand2),
+      result,
+    });
+
+    // Redirect back to the form
+    res.redirect('/finals');
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+const calculationsArray = [];
+
+router.get('/calculations', (req, res) => {
+  // Render the HTML page and pass the calculations array
+  res.render('calculations', { calculations: req.session.results || [] });
 });
 
 

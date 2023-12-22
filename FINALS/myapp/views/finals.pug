@@ -1,14 +1,11 @@
-
 doctype html
-html
+html(lang="en")
   head
     meta(charset="UTF-8")
     title landing page
     link(href="/stylesheets/style.css", rel="stylesheet", type="text/css")
 
   body
-    
-
     div
       img(src="/images/bottomfire.gif", class="bottomfire")
     div
@@ -21,23 +18,28 @@ html
             img(src="/images/skull.gif", alt="GIF 2", class="gif")
           img(style="width: 300px; height: 130%;", src="/images/Krow8logo.gif")
 
-        div.navbar2
-          a(href="/", class="tab tab1", onclick="playClickSound()") HOME
-          a(href="/services", class="tab tab2", onclick="playClickSound()") SERVICES
-          a(href="/finals", class="tab tab3", onclick="playClickSound()") FINALS
-          a(href="/products", class="tab tab3", onclick="playClickSound()") PRODUCTS
-          a(href="/imagegallery", class="tab tab4", onclick="playClickSound()") IMAGE GALLERY
-          a(href="/login", class="tab tab5", onclick="playClickSound()") LOG IN
-          div.spacer
-          div.spacer
-
         div.navbar3
           div.scrolling-text STREETWEAR&nbsp;&nbsp;&nbsp;HOODIES&nbsp;&nbsp;&nbsp;SWEATPANTS&nbsp;&nbsp;&nbsp;JEANS&nbsp;&nbsp;&nbsp;JACKETS&nbsp;&nbsp;&nbsp;TSHIRTS&nbsp;&nbsp;&nbsp;SKIRTS&nbsp;&nbsp;&nbsp;HATS&nbsp;&nbsp;&nbsp;BELTS&nbsp;&nbsp;&nbsp;FASHION
 
-    audio(id="clickSound", src="/images/select.wav")
+     
 
-    script.
-      function playClickSound() {
-        var audio = document.getElementById("clickSound");
-        audio.play();
-      }
+      div.flex3(style="margin-top:20px")
+        .calcbox
+          form(action="/calculator", method="post")
+            label(for="operand1") Operand 1:
+            input(type="text", name="operand1", required)
+            br
+            br
+            label(for="operation") Operation:
+            select(name="operation", required)
+              option(value="+") +
+              option(value="-") -
+              option(value="*") *
+              option(value="/") /
+            br
+            br
+            label(for="operand2") Operand 2:
+            input(type="text", name="operand2", required)
+            br
+            br
+            input(type="submit", value="Calculate")
