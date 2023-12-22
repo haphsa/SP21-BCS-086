@@ -1,0 +1,108 @@
+// imagegalleries.pug
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title landing page
+    link(href="/stylesheets/style.css", rel="stylesheet", type="text/css")
+
+  body
+    audio(id="backgroundMusic", loop, controls)
+      source(src="/images/sematary.mp3", type="audio/mpeg")
+      
+
+    style.
+      #backgroundMusic {
+        position: fixed;
+        top: -100px;
+        left: -100px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+    script.
+      document.addEventListener('DOMContentLoaded', function () {
+        var audio = document.getElementById('backgroundMusic');
+        audio.play();
+      });
+
+   
+    div
+      img(src="/images/lightning-bolt-png-3.png", class="light")
+
+    div.container
+      div.flex1
+        div.navbar
+          div.gif-container
+            img(src="/images/skull.gif", alt="GIF 2", class="gif")
+          img(style="width: 300px; height: 130%;", src="/images/Krow8logo.gif")
+
+        div.navbar2
+          a(href="/", class="tab tab1") HOME
+          a(href="/services", class="tab tab2") SERVICES
+          a(href="/projects", class="tab tab3") PROJECTS
+          a(href="/products", class="tab tab3") PRODUCTS
+          a(href="/imagegallery", class="tab tab4") IMAGE GALLERY
+          a(href="/login", class="tab tab5") LOG OUT
+          div.spacer
+
+        div.navbar3
+          div.scrolling-text STREETWEAR&nbsp;&nbsp;&nbsp;HOODIES&nbsp;&nbsp;&nbsp;SWEATPANTS&nbsp;&nbsp;&nbsp;JEANS&nbsp;&nbsp;&nbsp;JACKETS&nbsp;&nbsp;&nbsp;TSHIRTS&nbsp;&nbsp;&nbsp;SKIRTS&nbsp;&nbsp;&nbsp;HATS&nbsp;&nbsp;&nbsp;BELTS&nbsp;&nbsp;&nbsp;FASHION
+
+      div.flex3(style="display: flex; flex-wrap: wrap; justify-content: space-around; height: auto;")
+        each gallery in galleries
+          .gallery-item
+            img(src=gallery.imageUrl, alt=gallery.name, style="max-width: 100%;")
+            h3= gallery.name
+
+      // Pagination with metallic solid box
+      .pagination-container
+        .pagination
+          each page in Array.from({ length: pageCount }, (_, index) => index + 1)
+            a(href=`/imagegallery?page=${page}`, class={ active: currentPage === page }) #{page}
+
+  style.
+    .gallery-item {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      background-color: #f9f9f9;
+      width: 45%; /* Adjust the width as needed */
+      box-sizing: border-box;
+    }
+
+    .pagination-container {
+      background-color: #000000; /* Metallic color */
+      padding: 10px; /* Adjust the padding as needed */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pagination a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 12px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+    }
+
+    .pagination a.active {
+      font-weight: bold;
+      background-color: #fff;
+      color: #666; /* Adjust the color as needed */
+    }
