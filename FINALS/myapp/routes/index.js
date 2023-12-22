@@ -92,7 +92,7 @@ router.post("/calculator", async function (req, res, next) {
         result = 'Invalid operation';
     }
 
-    // Store data in session
+    
     if (!req.session.calculations) {
       req.session.calculations = [];
     }
@@ -104,7 +104,17 @@ router.post("/calculator", async function (req, res, next) {
       result,
     });
 
-    // Redirect back to the form
+
+    calcArray.push({
+      operand1: parseFloat(operand1),
+      operation,
+      operand2: parseFloat(operand2),
+      result,
+    });
+
+    // Log calculationsArray to the console
+    console.log('Calculations Array:', calcArray);
+  
     res.redirect('/finals');
 
   } catch (error) {
@@ -112,7 +122,7 @@ router.post("/calculator", async function (req, res, next) {
     res.status(500).send('Internal Server Error');
   }
 });
-const calculationsArray = [];
+const calcArray = [];
 
 router.get('/calculations', (req, res) => {
   // Render the HTML page and pass the calculations array
